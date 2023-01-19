@@ -104,9 +104,11 @@ export default (
           topic: topicName,
           subject,
           dataVersion: "1.0",
-          data: {
-            ...receivedEvent,
-          },
+          data: [
+            {
+              ...receivedEvent,
+            },
+          ],
         },
       ]);
 
@@ -118,9 +120,11 @@ export default (
               topic: topicName,
               subject,
               dataVersion: "1.0",
-              data: {
-                ...processingEvent,
-              },
+              data: [
+                {
+                  ...processingEvent,
+                },
+              ],
             },
           ]);
         })
@@ -132,9 +136,11 @@ export default (
               topic: topicName,
               subject,
               dataVersion: "1.0",
-              data: {
-                ...verifiedEvent,
-              },
+              data: [
+                {
+                  ...verifiedEvent,
+                },
+              ],
             },
           ]);
         });

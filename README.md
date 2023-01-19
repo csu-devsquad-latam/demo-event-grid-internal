@@ -7,6 +7,7 @@
 * A Service Principal that has the following roles: "EventGrid Contributor" and "EventGrid Data Sender"
 * (Optional) Install `humao.rest-client` VSCode Extension to run the `demo.rest` file
 
+### Steps
 0. Install NodeJS LTS
 1. `npm ci`
 2. Duplicate `.env.example` and fill out the information
