@@ -3,10 +3,13 @@ content-type: application/json
 
 {
   "participantId": "41c9150c-3b60-4559-823d-571e6fad90e8",
-  "targetUrl": "https://internal-eventgrid-debug.azurewebsites.net/api/updates",
+  /*
+    For the `targetUrl` you will need a https endpoint that can accept event grid events
+    Alternatively, you can also deploy the "Event Grid Viewer" as a test app
+    (https://learn.microsoft.com/en-us/samples/azure-samples/azure-event-grid-viewer/azure-event-grid-viewer/)
+  */
+  "targetUrl": "<change to a event-grid enabled webhook>",
   "eventType": "settlementVerify",
-  "authType": "token",
-  "accessToken": "secret"
 }
 
 
