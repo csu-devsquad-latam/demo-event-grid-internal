@@ -1,0 +1,21 @@
+POST http://localhost:3000/register HTTP/1.1
+content-type: application/json
+
+{
+  "participantId": "41c9150c-3b60-4559-823d-571e6fad90e8",
+  "targetUrl": "https://internal-eventgrid-debug.azurewebsites.net/api/updates",
+  "eventType": "settlementVerify",
+  "authType": "token",
+  "accessToken": "secret"
+}
+
+
+###
+POST http://localhost:3000/settlement/verify HTTP/1.1
+content-type: application/json
+
+{
+  "participantId": "41c9150c-3b60-4559-823d-571e6fad90e8",
+  "transactionId": "{{$guid}}",
+  "settlementId": "{{$guid}}"
+}
