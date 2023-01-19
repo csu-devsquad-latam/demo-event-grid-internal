@@ -128,7 +128,7 @@ resource "azurerm_key_vault_secret" "st_access_key_secret" {
 resource "azurerm_key_vault_secret" "eg_resource_group_secret" {
   key_vault_id = azurerm_key_vault.app.id
   name         = "resource-group-name"
-  value        = var.pubsub_connection_string
+  value        = var.eg_resource_group
   depends_on = [
     azurerm_key_vault_access_policy.pipeline_client
   ]
@@ -137,7 +137,7 @@ resource "azurerm_key_vault_secret" "eg_resource_group_secret" {
 resource "azurerm_key_vault_secret" "eg_domain_subscription_id_secret" {
   key_vault_id = azurerm_key_vault.app.id
   name         = "eg-domain-subscription-id"
-  value        = var.pubsub_connection_string
+  value        = var.eg_domain_subscription_id
   depends_on = [
     azurerm_key_vault_access_policy.pipeline_client
   ]
@@ -146,7 +146,7 @@ resource "azurerm_key_vault_secret" "eg_domain_subscription_id_secret" {
 resource "azurerm_key_vault_secret" "eg_domain_name_secret" {
   key_vault_id = azurerm_key_vault.app.id
   name         = "eg-domain-name"
-  value        = var.pubsub_connection_string
+  value        = var.eg_domain_name
   depends_on = [
     azurerm_key_vault_access_policy.pipeline_client
   ]
@@ -155,7 +155,7 @@ resource "azurerm_key_vault_secret" "eg_domain_name_secret" {
 resource "azurerm_key_vault_secret" "eg_domain_endpoint_secret" {
   key_vault_id = azurerm_key_vault.app.id
   name         = "eg-domain-endpoint"
-  value        = var.pubsub_connection_string
+  value        = var.eg_domain_endpoint
   depends_on = [
     azurerm_key_vault_access_policy.pipeline_client
   ]
@@ -164,7 +164,7 @@ resource "azurerm_key_vault_secret" "eg_domain_endpoint_secret" {
 resource "azurerm_key_vault_secret" "az_client_secret_secret" {
   key_vault_id = azurerm_key_vault.app.id
   name         = "az-client-secret"
-  value        = var.pubsub_connection_string
+  value        = var.az_client_secret
   depends_on = [
     azurerm_key_vault_access_policy.pipeline_client
   ]
@@ -173,7 +173,7 @@ resource "azurerm_key_vault_secret" "az_client_secret_secret" {
 resource "azurerm_key_vault_secret" "az_client_id_secret" {
   key_vault_id = azurerm_key_vault.app.id
   name         = "az-client-id"
-  value        = var.pubsub_connection_string
+  value        = var.az_client_id
   depends_on = [
     azurerm_key_vault_access_policy.pipeline_client
   ]
@@ -182,7 +182,7 @@ resource "azurerm_key_vault_secret" "az_client_id_secret" {
 resource "azurerm_key_vault_secret" "az_tenant_id_secret" {
   key_vault_id = azurerm_key_vault.app.id
   name         = "az-tenant-id"
-  value        = var.pubsub_connection_string
+  value        = var.az_tenant_id
   depends_on = [
     azurerm_key_vault_access_policy.pipeline_client
   ]
