@@ -2,8 +2,8 @@ export type RegisterRequest = {
   participantId: string; // GUID
   targetUrl: string;
   eventType: string;
-  authType: string;
-  accessToken: string;
+  // authType: string;
+  // accessToken: string;
 };
 
 export type RegisterResponse = {

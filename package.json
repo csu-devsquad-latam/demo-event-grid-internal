@@ -1,5 +1,5 @@
 {
-  "name": "demo-eventgrid-b3",
+  "name": "demo-eventgrid-internal",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

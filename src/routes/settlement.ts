@@ -28,8 +28,7 @@ export default (
   router.post<{}, RegisterResponse, RegisterRequest>(
     "/register",
     async (req, res) => {
-      const { accessToken, authType, eventType, participantId, targetUrl } =
-        req.body;
+      const { eventType, participantId, targetUrl } = req.body;
 
       console.log(resourceGroupName, domainName, participantId);
       console.log("creating or updating topic", participantId);
