@@ -19,3 +19,6 @@ content-type: application/json
   "transactionId": "{{$guid}}",
   "settlementId": "{{$guid}}"
 }
+
+###
+GET http://localhost:3000/healthz HTTP/1.1
